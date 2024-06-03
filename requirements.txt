@@ -1,0 +1,10 @@
+opencv-python==4.9.0.80
+requests==2.32.2
+pyzbar==0.1.9
+numpy==1.26.4
+import time
+pillow==10.3.0
+tensorflow==2.16.1
+keras==3.3.3
+scikit-learn==1.5.0
+Flask==3.0.3
