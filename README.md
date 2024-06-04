@@ -1,5 +1,5 @@
 # TruQR
-
+gjkhjkhk
 <div align="center">
 	<img src="https://github.com/Abdul-Rahmaan-klipit/TruQR/blob/main/resources/comparison/outer_with_inner_qr.png">
 </div>
