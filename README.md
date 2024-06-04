@@ -1,8 +1,15 @@
 # TruQR
-gjkhjkhk
+
 <div align="center">
 	<img src="https://github.com/Abdul-Rahmaan-klipit/TruQR/blob/main/resources/comparison/outer_with_inner_qr.png">
 </div>
+
+The following Flask app detected QR codes and sends images for decoding at the server side.
+The detected frames undergo preprocessing for detection of inner QR via edge detection.
+Both the outer as well as inner QR are passed for similarity check
+Reprogrammed Working API for passing entire frame as input and performing backend operations
+Error formed: Max retries exceeded with url
+Resolvation attempts: creating session, try-exception, passing additional paramters (proxies, verify=False), status: unresolved
 
 ### Recommended to use [Python 3.9](https://www.python.org/downloads/release/python-390/)
 
