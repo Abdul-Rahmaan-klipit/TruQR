@@ -38,7 +38,31 @@ python app.py
 ```
 python main.py
 ```
-
+### Steps for Deploying to AWS LightSail
+- Open Command Prompt in your directory containing the server key obtained from AWS LightSail website.
+- Next Enter the following shell command.
+```
+ssh -i filename.pem ubuntu@ipv4address
+```
+- Example:
+```
+ssh -i serverkey.pem ubuntu@43.205.214.129
+```
+- Clone the github repository containing the server and the client code.
+- And navigate into the directory.
+- Install Node.js and Pm2 package for running multiple files parallely.
+- To run
+```
+pm2 start api.py
+pm2 start main.py
+```
+- To view logs run
+```
+pm2 logs
+# or
+pm2 logs 0
+pm2 logs 1
+```
 ### Generating TruQR
 - For Generating QR Code run [Generate-QR-Final.ipynb](https://github.com/Abdul-Rahmaan-klipit/TruQR/blob/main/Generate-QR-Final.ipynb)
 
