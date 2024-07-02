@@ -54,7 +54,7 @@ def crop_inner_qr(image):
                 cropped_img = image[y:y+h, x:x+w]
                 filename = f"inner_qr_code_{int(time.time())}.png"
                 # cv2.imshow('Contours', cropped_img)
-                # cv2.imwrite(filename, cropped_img)
+                cv2.imwrite(filename, cropped_img)
                 return filename
     
 
@@ -81,7 +81,7 @@ def draw_and_save_qr(img, barcode):
     cropped_img = img[y_min:y_max, x_min:x_max]
     filename = f"qr_code_{int(time.time())}.png"
     # cv2.imshow(filename, cropped_img)
-    # cv2.imwrite(filename, cropped_img)
+    cv2.imwrite(filename, cropped_img)
 
     similarity_score = get_similarity_score("resources/comparison/outer_with_inner_qr.png", filename)
     print(f"Similarity Score of Whole QR: {similarity_score}")
