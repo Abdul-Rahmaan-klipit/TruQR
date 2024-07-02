@@ -114,7 +114,7 @@ def capture_and_send_frame():
         barcode = decode(cf)
         if barcode:
             cropped_image = draw_and_save_qr(cf.copy(), barcode[0])
-            url = "http://127.0.0.1:5000/decode_qr_code"
+            url = "http://43.205.214.129:5000/decode_qr_code"
             _, img_encoded = cv2.imencode('.jpg', cropped_image)
             img_base64 = base64.b64encode(img_encoded).decode('utf-8')
             response = requests.post(url , data={'image': img_base64})
