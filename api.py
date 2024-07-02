@@ -6,6 +6,10 @@ from pyzbar.pyzbar import decode
 
 app = Flask(__name__)
 
+@app.route('/home', methods=['GET'])
+def home():
+    return "HI!!"
+
 @app.route('/decode_qr_code', methods=['POST'])
 def decode_qr_code():
     if 'image' not in request.form:
