@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/home', methods=['GET'])
 def home():
+    print('HI!!')
     return "HI!!"
 
 @app.route('/decode_qr_code', methods=['POST'])
