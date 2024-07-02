@@ -53,8 +53,8 @@ def crop_inner_qr(image):
             if h == w or h == (w + 1) or w == (h + 1) and h < 90 and w < 90:
                 cropped_img = image[y:y+h, x:x+w]
                 filename = f"inner_qr_code_{int(time.time())}.png"
-                cv2.imshow('Contours', cropped_img)
-                cv2.imwrite(filename, cropped_img)
+                # cv2.imshow('Contours', cropped_img)
+                # cv2.imwrite(filename, cropped_img)
                 return filename
     
 
@@ -80,8 +80,8 @@ def draw_and_save_qr(img, barcode):
 
     cropped_img = img[y_min:y_max, x_min:x_max]
     filename = f"qr_code_{int(time.time())}.png"
-    cv2.imshow(filename, cropped_img)
-    cv2.imwrite(filename, cropped_img)
+    # cv2.imshow(filename, cropped_img)
+    # cv2.imwrite(filename, cropped_img)
 
     similarity_score = get_similarity_score("resources/comparison/outer_with_inner_qr.png", filename)
     print(f"Similarity Score of Whole QR: {similarity_score}")
@@ -104,7 +104,7 @@ def capture_and_send_frame():
         ret, frame = cap.read()
         x= 26
         frame=cv2.rectangle(frame, (400,250),(600+x,450+x),color,thickness)
-        cv2.imshow('frame', frame)
+        # cv2.imshow('frame', frame)
         cf=frame[250:450+x,400:600+x]
         if not ret:
             print("Failed to capture frame")
